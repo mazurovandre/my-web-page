@@ -50,9 +50,27 @@ ul, li {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.scene-bg {
+  background: url("public/bg.jpg");
+  background-size: cover;
+  filter: sepia(1) brightness(0.5);
+  scale: 1.1;
+}
+
+.scene-layer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   pointer-events: auto;
 }
@@ -104,6 +122,19 @@ ul, li {
   fill: var(--main-text-color);
 }
 
-.btn-item a {
-
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  .scene-bg {
+    filter: brightness(0.3);
+  }
+  .btn-list {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .btn-item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
