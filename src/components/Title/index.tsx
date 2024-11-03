@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { useTranslation } from "react-i18next";
 
-import styles from './style.module.css';
+import styles from "./style.module.css";
 
 const Title = () => {
   const { t }: { t: (key: string) => string } = useTranslation();
